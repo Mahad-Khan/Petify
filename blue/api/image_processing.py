@@ -72,7 +72,6 @@ def image_matching(query_url,image_urls):
         final_features_query = np.concatenate([inception_features,xception_features], axis = 1)
     else:
         return jsonify({"api_status":400,"msg":"query Url is not valid"})
-
     cost_list=[]
     for image_url in image_urls:
         valid=validators.url(image_url)

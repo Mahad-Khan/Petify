@@ -154,3 +154,182 @@
 2021-03-22 06:41:22,276 DEBUG urllib3.connectionpool Thread-4 : https://thumbs.dreamstime.com:443 "GET /z/akita-dog-park-beautiful-standing-nature-outdoors-117824417.jpg HTTP/1.1" 200 143149
 2021-03-22 06:41:57,284 INFO werkzeug Thread-4 : 127.0.0.1 - - [22/Mar/2021 06:41:57] "[37mPOST /api/found HTTP/1.1[0m" 200 -
 2021-03-22 06:43:16,733 INFO werkzeug Thread-5 : 127.0.0.1 - - [22/Mar/2021 06:43:16] "[37mPOST /api/yes_found HTTP/1.1[0m" 200 -
+2021-03-23 10:05:19,848 WARNING tensorflow MainThread : Large dropout rate: 0.7 (>0.5). In TensorFlow 2.x, dropout() uses dropout rate instead of keep_prob. Please ensure that this is intended.
+2021-03-23 10:05:32,371 INFO werkzeug MainThread :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-03-23 10:59:03,970 WARNING tensorflow MainThread : Large dropout rate: 0.7 (>0.5). In TensorFlow 2.x, dropout() uses dropout rate instead of keep_prob. Please ensure that this is intended.
+2021-03-23 10:59:14,673 INFO werkzeug MainThread :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-03-23 10:59:36,443 ERROR blue Thread-1 : Exception on /api/register [POST]
+Traceback (most recent call last):
+  File "/home/mahad/FYP/Petify/blue/api/routes.py", line 367, in post
+    db.session.query(User).delete()
+NameError: name 'User' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/mahad/FYP/Petify/blue/api/routes.py", line 425, in post
+    return jsonify(ret)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'NameError' is not JSON serializable
+2021-03-23 10:59:36,478 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Mar/2021 10:59:36] "[1m[35mPOST /api/register HTTP/1.1[0m" 500 -
+2021-03-23 11:00:13,579 WARNING tensorflow MainThread : Large dropout rate: 0.7 (>0.5). In TensorFlow 2.x, dropout() uses dropout rate instead of keep_prob. Please ensure that this is intended.
+2021-03-23 11:00:28,241 INFO werkzeug MainThread :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-03-23 11:00:36,502 WARNING tensorflow MainThread : Large dropout rate: 0.7 (>0.5). In TensorFlow 2.x, dropout() uses dropout rate instead of keep_prob. Please ensure that this is intended.
+2021-03-23 11:00:47,345 INFO werkzeug MainThread :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-03-23 11:01:06,343 WARNING tensorflow MainThread : Large dropout rate: 0.7 (>0.5). In TensorFlow 2.x, dropout() uses dropout rate instead of keep_prob. Please ensure that this is intended.
+2021-03-23 11:01:17,732 INFO werkzeug MainThread :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-03-23 11:02:22,475 DEBUG urllib3.connectionpool Thread-1 : Starting new HTTPS connection (1): thumbs.dreamstime.com:443
+2021-03-23 11:02:22,834 DEBUG urllib3.connectionpool Thread-1 : https://thumbs.dreamstime.com:443 "GET /z/akita-dog-park-beautiful-standing-nature-outdoors-117824417.jpg HTTP/1.1" 200 143149
+2021-03-23 11:02:43,730 INFO werkzeug Thread-1 : 127.0.0.1 - - [23/Mar/2021 11:02:43] "[37mPOST /api/register HTTP/1.1[0m" 200 -
+2021-03-23 11:10:13,767 INFO werkzeug Thread-2 : 127.0.0.1 - - [23/Mar/2021 11:10:13] "[37mPOST /api/lost HTTP/1.1[0m" 200 -
+2021-03-23 11:10:24,844 INFO werkzeug Thread-3 : 127.0.0.1 - - [23/Mar/2021 11:10:24] "[37mPOST /api/lost HTTP/1.1[0m" 200 -
+2021-03-23 11:10:31,038 INFO werkzeug Thread-4 : 127.0.0.1 - - [23/Mar/2021 11:10:31] "[37mPOST /api/lost HTTP/1.1[0m" 200 -
+2021-03-23 11:13:15,287 DEBUG urllib3.connectionpool Thread-5 : Starting new HTTPS connection (1): www.rover.com:443
+2021-03-23 11:13:15,574 DEBUG urllib3.connectionpool Thread-5 : https://www.rover.com:443 "GET /blog/wp-content/uploads/2019/09/Labrador_Retriever-min-1.jpg HTTP/1.1" 200 54427
+2021-03-23 11:13:39,392 INFO werkzeug Thread-5 : 127.0.0.1 - - [23/Mar/2021 11:13:39] "[37mPOST /api/found HTTP/1.1[0m" 200 -
+2021-03-23 11:17:42,267 INFO werkzeug Thread-6 : 127.0.0.1 - - [23/Mar/2021 11:17:42] "[37mPOST /api/register HTTP/1.1[0m" 200 -
+2021-03-23 11:17:56,534 DEBUG urllib3.connectionpool Thread-7 : Starting new HTTPS connection (1): cdn.buttercms.com:443
+2021-03-23 11:17:56,759 DEBUG urllib3.connectionpool Thread-7 : https://cdn.buttercms.com:443 "GET /HqGWxnjfQtCO2QuV8oew HTTP/1.1" 200 317676
+2021-03-23 11:17:57,495 DEBUG PIL.TiffImagePlugin Thread-7 : tag: Orientation (274) - type: short (3) - value: b'\x00\x01'
+2021-03-23 11:17:57,495 DEBUG PIL.TiffImagePlugin Thread-7 : tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 98 - value: b"\x00\n\xfc\x80\x00\x00'\x10"
+2021-03-23 11:17:57,495 DEBUG PIL.TiffImagePlugin Thread-7 : tag: YResolution (283) - type: rational (5) Tag Location: 46 - Data Location: 106 - value: b"\x00\n\xfc\x80\x00\x00'\x10"
+2021-03-23 11:17:57,495 DEBUG PIL.TiffImagePlugin Thread-7 : tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+2021-03-23 11:17:57,496 DEBUG PIL.TiffImagePlugin Thread-7 : tag: Software (305) - type: string (2) Tag Location: 70 - Data Location: 114 - value: <table: 33 bytes>
+2021-03-23 11:17:57,496 DEBUG PIL.TiffImagePlugin Thread-7 : tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 148 - value: b'2020:09:24 15:33:10\x00'
+2021-03-23 11:17:57,496 DEBUG PIL.TiffImagePlugin Thread-7 : tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xa8'
+2021-03-23 11:17:57,497 DEBUG PIL.TiffImagePlugin Thread-7 : tag: ExifVersion (36864) - type: undefined (7) - value: b'0210'
+2021-03-23 11:17:57,497 DEBUG PIL.TiffImagePlugin Thread-7 : tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+2021-03-23 11:17:57,497 DEBUG PIL.TiffImagePlugin Thread-7 : tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+2021-03-23 11:17:57,497 DEBUG PIL.TiffImagePlugin Thread-7 : tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x03\xe8'
+2021-03-23 11:17:57,498 DEBUG PIL.TiffImagePlugin Thread-7 : tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\x9b'
+2021-03-23 11:18:22,089 INFO werkzeug Thread-7 : 127.0.0.1 - - [23/Mar/2021 11:18:22] "[37mPOST /api/register HTTP/1.1[0m" 200 -
+2021-03-23 11:21:02,588 INFO werkzeug Thread-8 : 127.0.0.1 - - [23/Mar/2021 11:21:02] "[37mPOST /api/register HTTP/1.1[0m" 200 -
+2021-03-23 11:22:20,984 DEBUG urllib3.connectionpool Thread-9 : Starting new HTTPS connection (1): trupanion.com:443
+2021-03-23 11:22:22,671 DEBUG urllib3.connectionpool Thread-9 : https://trupanion.com:443 "GET /-/media/trupanion/images/breed--guide--new/chihuahua/chihuahua.jpg?la=en&hash=417B4667098E6FCCBFC456F1FE770D106E576D2A HTTP/1.1" 200 41450
+2021-03-23 11:22:43,658 INFO werkzeug Thread-9 : 127.0.0.1 - - [23/Mar/2021 11:22:43] "[37mPOST /api/register HTTP/1.1[0m" 200 -
+2021-03-23 11:23:21,708 INFO werkzeug Thread-10 : 127.0.0.1 - - [23/Mar/2021 11:23:21] "[37mPOST /api/lost HTTP/1.1[0m" 200 -
+2021-03-23 11:24:52,108 INFO werkzeug Thread-11 : 127.0.0.1 - - [23/Mar/2021 11:24:52] "[37mPOST /api/found HTTP/1.1[0m" 200 -
+2021-03-23 11:24:58,929 DEBUG urllib3.connectionpool Thread-12 : Starting new HTTPS connection (1): myanimals.com:443
+2021-03-23 11:24:59,542 DEBUG urllib3.connectionpool Thread-12 : https://myanimals.com:443 "GET /wp-content/uploads/2018/04/chihuahuas.jpg HTTP/1.1" 200 37679
+2021-03-23 11:25:24,488 DEBUG urllib3.connectionpool Thread-12 : Starting new HTTPS connection (1): myanimals.com:443
+2021-03-23 11:25:24,900 DEBUG urllib3.connectionpool Thread-12 : https://myanimals.com:443 "GET /wp-content/uploads/2018/04/chihuahuas.jpg HTTP/1.1" 200 37679
+2021-03-23 11:25:47,811 DEBUG urllib3.connectionpool Thread-12 : Starting new HTTPS connection (1): trupanion.com:443
+2021-03-23 11:25:49,581 DEBUG urllib3.connectionpool Thread-12 : https://trupanion.com:443 "GET /-/media/trupanion/images/breed--guide--new/chihuahua/chihuahua.jpg?la=en&hash=417B4667098E6FCCBFC456F1FE770D106E576D2A HTTP/1.1" 200 41450
+2021-03-23 11:26:13,424 INFO werkzeug Thread-12 : 127.0.0.1 - - [23/Mar/2021 11:26:13] "[37mPOST /api/found HTTP/1.1[0m" 200 -
+2021-03-23 11:28:58,255 ERROR blue Thread-13 : Exception on /api/yes_found [POST]
+Traceback (most recent call last):
+  File "/home/mahad/FYP/Petify/blue/api/routes.py", line 552, in post
+    pet_url=Data['url']
+KeyError: 'url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/mahad/FYP/Petify/blue/api/routes.py", line 586, in post
+    return jsonify(ret)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'KeyError' is not JSON serializable
+2021-03-23 11:28:58,275 INFO werkzeug Thread-13 : 127.0.0.1 - - [23/Mar/2021 11:28:58] "[1m[35mPOST /api/yes_found HTTP/1.1[0m" 500 -
+2021-03-23 11:30:00,139 ERROR blue Thread-14 : Exception on /api/yes_found [POST]
+Traceback (most recent call last):
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/werkzeug/wrappers/json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/__init__.py", line 367, in loads
+    return cls(**kw).decode(s)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 4 column 9 (char 55)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mahad/FYP/Petify/blue/api/routes.py", line 549, in post
+    Data=request.get_json()
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/werkzeug/wrappers/json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/mahad/FYP/Petify/blue/api/routes.py", line 586, in post
+    return jsonify(ret)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/site-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/home/mahad/anaconda3/envs/ml/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'BadRequest' is not JSON serializable
+2021-03-23 11:30:00,148 INFO werkzeug Thread-14 : 127.0.0.1 - - [23/Mar/2021 11:30:00] "[1m[35mPOST /api/yes_found HTTP/1.1[0m" 500 -
+2021-03-23 11:30:20,877 INFO werkzeug Thread-15 : 127.0.0.1 - - [23/Mar/2021 11:30:20] "[37mPOST /api/yes_found HTTP/1.1[0m" 200 -
